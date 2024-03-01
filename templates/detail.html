@@ -1,0 +1,17 @@
+
+{% extends 'home.html' %}
+
+{% block body %}
+
+<br>
+<div class="container">
+    <a href="{% url 'home' %}"><button class="btn btn-info"> GO back</button></a>
+
+    <br>
+    <br>
+    <div>
+      {% load custom_tags  %}
+      {% order_items similar_jobs %}
+    </div>
+</div>
+{% endblock %}
